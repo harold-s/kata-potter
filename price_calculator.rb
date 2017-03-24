@@ -14,12 +14,13 @@ class PriceCalculator
   end
 
   def calculate
-    books.count * BOOK_BASE_PRICE * (1 - (discount.to_f / 100))
+    books.count * BOOK_BASE_PRICE - discount
   end
 
   private
 
   def discount
-    DISCOUNTS[books.size] || 0
+    discount_pc = DISCOUNTS[books.size] || 0
+    BOOK_BASE_PRICE * books.size * (discount_pc.to_f / 100)
   end
 end
