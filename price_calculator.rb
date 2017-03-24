@@ -8,6 +8,6 @@ class PriceCalculator
   end
 
   def calculate
-    BOOK_BASE_PRICE
+    books.count * BOOK_BASE_PRICE
   end
 end
