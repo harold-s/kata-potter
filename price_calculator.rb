@@ -20,7 +20,8 @@ class PriceCalculator
   private
 
   def discount
-    discount_pc = DISCOUNTS[books.size] || 0
-    BOOK_BASE_PRICE * books.size * (discount_pc.to_f / 100)
+    books_size_uniq = books.uniq.size
+    discount_pc = DISCOUNTS[books_size_uniq] || 0
+    BOOK_BASE_PRICE * books_size_uniq * (discount_pc.to_f / 100)
   end
 end
