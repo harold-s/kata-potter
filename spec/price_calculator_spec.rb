@@ -14,57 +14,39 @@ RSpec.describe PriceCalculator do
     subject { instance.calculate }
     context '0 book' do
       let(:books) { [] }
-      it 'returns 0' do
-        is_expected.to eq 0
-      end
+      it { is_expected.to eq 0 }
     end
     context '1 book' do
       let(:books) { [0] }
-      it 'returns 8' do
-        is_expected.to eq 8
-      end
+      it { is_expected.to eq 8 }
     end
     context '2 different books' do
       let(:books) { [0, 1] }
-      it 'returns 15.2' do
-        is_expected.to eq 15.2
-      end
+      it { is_expected.to eq 15.2 }
     end
     context '3 books with 2 different books' do
       let(:books) { [0, 1, 1] }
-      it 'returns 23.2' do
-        is_expected.to eq 23.2
-      end
+      it { is_expected.to eq 23.2 }
     end
     context '3 different books' do
       let(:books) { [0, 1, 2] }
-      it 'returns 21.6' do
-        is_expected.to eq 21.6
-      end
+      it { is_expected.to eq 21.6 }
     end
     context '4 books with 3 different books' do
       let(:books) { [0, 1, 2, 1] }
-      it 'returns 29.6' do
-        is_expected.to eq 29.6
-      end
+      it { is_expected.to eq 29.6 }
     end
     context '4 different books' do
       let(:books) { [0, 1, 2, 3] }
-      it 'returns 25.6' do
-        is_expected.to eq 25.6
-      end
+      it { is_expected.to eq 25.6 }
     end
     context '5 different books' do
       let(:books) { [0, 1, 2, 3, 4] }
-      it 'returns 30' do
-        is_expected.to eq 30
-      end
+      it { is_expected.to eq 30 }
     end
     context '8 books with 5 different books' do
       let(:books) { [0, 1, 2, 3, 4, 2, 4, 1] }
-      it 'returns 54' do
-        is_expected.to eq 54
-      end
+      it { is_expected.to eq 54 }
     end
   end
 end
