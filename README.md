@@ -1,3 +1,5 @@
+*I created this code during a Storyful workshop on TDD (based on [@giannileggio](https://github.com/giannileggio) skeleton)*
+
 # KataPotter
 
 ### Problem Description
