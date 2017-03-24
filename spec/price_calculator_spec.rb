@@ -24,26 +24,44 @@ RSpec.describe PriceCalculator do
         is_expected.to eq 8
       end
     end
-    context '2 different books (with discount)' do
+    context '2 different books' do
       let(:books) { [0, 1] }
       it 'returns 15.2' do
         is_expected.to eq 15.2
       end
     end
-    context '3 different books (with discount)' do
+    context '3 books with 2 different books' do
+      let(:books) { [0, 1, 1] }
+      it 'returns 23.2' do
+        is_expected.to eq 23.2
+      end
+    end
+    context '3 different books' do
       let(:books) { [0, 1, 2] }
       it 'returns 21.6' do
         is_expected.to eq 21.6
       end
     end
-    context '4 different books (with discount)' do
+    context '4 books with 3 different books' do
+      let(:books) { [0, 1, 2, 1] }
+      it 'returns 29.6' do
+        is_expected.to eq 29.6
+      end
+    end
+    context '4 different books' do
       let(:books) { [0, 1, 2, 3] }
       it 'returns 25.6' do
         is_expected.to eq 25.6
       end
     end
-    context '5 different books (with discount)' do
+    context '5 different books' do
       let(:books) { [0, 1, 2, 3, 4] }
+      it 'returns 30' do
+        is_expected.to eq 30
+      end
+    end
+    context '8 books with 5 different books' do
+      let(:books) { [0, 1, 2, 3, 4, 2, 4, 1] }
       it 'returns 30' do
         is_expected.to eq 30
       end
