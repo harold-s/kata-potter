@@ -1,5 +1,7 @@
 *I created this code during a Storyful workshop on TDD (based on [@giannileggio](https://github.com/giannileggio) skeleton)*
 
+[![Code Climate](https://codeclimate.com/github/harold-s/kata-potter/badges/gpa.svg)](https://codeclimate.com/github/harold-s/kata-potter)
+
 # KataPotter
 
 ### Problem Description
