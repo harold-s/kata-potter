@@ -12,6 +12,12 @@ RSpec.describe PriceCalculator do
 
   describe '#calculate' do
     subject { instance.calculate }
+    context '0 book' do
+      let(:books) { [] }
+      it 'returns 0' do
+        is_expected.to eq 0
+      end
+    end
     context '1 book' do
       let(:books) { [0] }
       it 'returns 8' do
