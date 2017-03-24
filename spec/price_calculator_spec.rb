@@ -48,5 +48,9 @@ RSpec.describe PriceCalculator do
       let(:books) { [0, 1, 2, 3, 4, 2, 4, 1] }
       it { is_expected.to eq 51.6 }
     end
+    context '9 books with 3 sets of discounts' do
+      let(:books) { [0, 1, 2, 3, 4, 2, 4, 1, 1, 2] }
+      it { is_expected.to eq 66.8 }
+    end
   end
 end
