@@ -20,6 +20,10 @@ RSpec.describe PriceCalculator do
       let(:books) { [0] }
       it { is_expected.to eq 8 }
     end
+    context '2 identical books' do
+      let(:books) { [2, 2] }
+      it { is_expected.to eq 16 }
+    end
     context '2 different books' do
       let(:books) { [0, 1] }
       it { is_expected.to eq 15.2 }
